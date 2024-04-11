@@ -24,9 +24,16 @@ public class MainController {
 	
 	@RequestMapping("/getReg")
 	public String getReg(){
+
 		return "EmpReg";
 	}
-	
+
+	@RequestMapping("/geLogin")
+	public String getLogin(){
+
+		return "Login";
+	}
+
 	@RequestMapping(value="register",method=RequestMethod.POST)
 	public String doReg(@ModelAttribute("rm") EmpRegModel rm){
 		empservice.addEMP(rm);	
